@@ -1,0 +1,4 @@
+model.evaluate(test_X, test_y, batch_size=1024)
+# best_model.h5
+# 1/1 [==============================] - 7s 7s/step - loss: 0.8832 - accuracy: 0.8375
+# [0.8832384943962097, 0.8374741077423096]
