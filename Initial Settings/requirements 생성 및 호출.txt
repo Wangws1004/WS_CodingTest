@@ -1,0 +1,5 @@
+※ requirements.txt 생성 명령어
+pip list —format=freeze > requirements.txt
+
+※ requirements.txt 설치 명령어
+pip install -r requirements.txt
