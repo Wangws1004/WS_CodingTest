@@ -1,0 +1,128 @@
+(base) C:\Users\user>conda env list
+# conda environments:
+#
+base                  *  C:\Users\user\anaconda3
+torch                    C:\Users\user\anaconda3\envs\torch
+
+
+(base) C:\Users\user>conda activate torch
+
+(torch) C:\Users\user>where python
+C:\Users\user\anaconda3\envs\torch\python.exe
+C:\Users\user\AppData\Local\Programs\Python\Python310\python.exe
+C:\Users\user\AppData\Local\Microsoft\WindowsApps\python.exe
+
+(torch) C:\Users\user>python test.exe
+
+(torch) C:\Users\user>where pip
+C:\Users\user\anaconda3\envs\torch\Scripts\pip.exe
+C:\Users\user\AppData\Local\Programs\Python\Python310\Scripts\pip.exe
+C:\Python37\Scripts\pip.exe
+
+(torch) C:\Users\user>python
+Python 3.10.13 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:24:38) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import torch
+>>> torch.cuda.is_available()
+True
+>>> ^D
+KeyboardInterrupt
+>>> exit()
+
+(torch) C:\Users\user>conda deactivate
+
+(base) C:\Users\user>python
+Python 3.11.5 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:26:23) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+
+(base) C:\Users\user>conda deactivate
+
+C:\Users\user>where python
+C:\Users\user\AppData\Local\Programs\Python\Python310\python.exe
+C:\Users\user\AppData\Local\Microsoft\WindowsApps\python.exe
+
+C:\Users\user>python
+Python 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+
+C:\Users\user>conda
+usage: conda-script.py [-h] [--no-plugins] [-V] COMMAND ...
+
+conda is a tool for managing and deploying applications, environments and packages.
+
+options:
+  -h, --help          Show this help message and exit.
+  --no-plugins        Disable all plugins that are not built into conda.
+  -V, --version       Show the conda version number and exit.
+
+commands:
+  The following built-in and plugins subcommands are available.
+
+  COMMAND
+    build             Build conda packages from a conda recipe.
+    clean             Remove unused packages and caches.
+    compare           Compare packages between conda environments.
+    config            Modify configuration values in .condarc.
+    content-trust     Signing and verification tools for Conda
+    convert           Convert pure Python packages to other platforms (a.k.a., subdirs).
+    create            Create a new conda environment from a list of specified packages.
+    debug             Debug the build or test phases of conda recipes.
+    develop           Install a Python package in 'development mode'. Similar to `pip install --editable`.
+    doctor            Display a health report for your environment.
+    env               See `conda env --help`.
+    index             Update package index metadata files. Pending deprecation, use https://github.com/conda/conda-
+                      index instead.
+    info              Display information about current conda install.
+    init              Initialize conda for shell interaction.
+    inspect           Tools for inspecting conda packages.
+    install           Install a list of packages into a specified conda environment.
+    list              List installed packages in a conda environment.
+    metapackage       Specialty tool for generating conda metapackage.
+    notices           Retrieve latest channel notifications.
+    pack              See `conda pack --help`.
+    package           Create low-level conda packages. (EXPERIMENTAL)
+    remove (uninstall)
+                      Remove a list of packages from a specified conda environment.
+    rename            Rename an existing environment.
+    render            Expand a conda recipe into a platform-specific recipe.
+    repo              See `conda repo --help`.
+    run               Run an executable in a conda environment.
+    search            Search for packages and display associated information using the MatchSpec format.
+    server            See `conda server --help`.
+    skeleton          Generate boilerplate conda recipes.
+    token             See `conda token --help`.
+    update (upgrade)  Update conda packages to the latest compatible version.
+    verify            See `conda verify --help`.
+
+C:\Users\user>conda activate base
+
+(base) C:\Users\user>conda activate base
+
+(base) C:\Users\user>conda activate torch
+
+(torch) C:\Users\user>d:
+
+(torch) D:\Men-in-Black\Traffic Light\Traffic Light Status\Traffic Light>python test.py
+C:\Users\user\anaconda3\envs\torch\lib\site-packages\torchaudio\backend\utils.py:74: UserWarning: No audio backend is available.
+  warnings.warn("No audio backend is available.")
+True
+C:\Users\user\anaconda3\envs\torch\lib\site-packages\pytorch_lightning\utilities\migration\migration.py:195: PossibleUserWarning: You have multiple `ModelCheckpoint` callback states in this checkpoint, but we found state keys that would end up colliding with each other after an upgrade, which means we can't differentiate which of your checkpoint callbacks needs which states. At least one of your `ModelCheckpoint` callbacks will not be able to reload the state.
+  rank_zero_warn(
+Lightning automatically upgraded your loaded checkpoint from v1.1.0 to v1.9.5. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint --file D:\Men-in-Black\Traffic Light\Traffic Light Status\Traffic Light\epoch=5-step=113.ckpt`
+C:\Users\user\anaconda3\envs\torch\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\user\anaconda3\envs\torch\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=MobileNet_V2_Weights.IMAGENET1K_V1`. You can also use `weights=MobileNet_V2_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+C:\Users\user\anaconda3\envs\torch\lib\site-packages\pytorch_lightning\trainer\connectors\logger_connector\logger_connector.py:67: UserWarning: Starting from v1.9.0, `tensorboardX` has been removed as a dependency of the `pytorch_lightning` package, due to potential conflicts with other packages in the ML ecosystem. For this reason, `logger=True` will use `CSVLogger` as the default logger, unless the `tensorboard` or `tensorboardX` packages are found. Please `pip install lightning[extra]` or one of them to enable TensorBoard support by default
+  warning_cache.warn(
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+dataset size :  4
+C:\Users\user\anaconda3\envs\torch\lib\site-packages\pytorch_lightning\trainer\connectors\data_connector.py:224: PossibleUserWarning: The dataloader, test_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 8 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Testing DataLoader 0:   0%|                                                                      | 0/4 [00:00<?, ?it/s]label red pred red
